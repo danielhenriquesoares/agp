@@ -1,0 +1,17 @@
+<html ng-app="test">
+  <head>
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body ng-controller="Agp">
+    <div ng-repeat="dev in agpDevsOporto track by $index">
+      <dev dev="dev"></dev>
+      <div ng-show="!$last" class="separator" style="height: 1px; width: 200px;border-top: 1px solid grey;"></div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular-route.min.js"></script>
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <script type="text/javascript" src="controllers/agp_controller.js"></script>
+    <script type="text/javascript" src="directives/agp_directive.js"></script>
+  </body>
+</html>
