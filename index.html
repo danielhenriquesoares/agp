@@ -4,7 +4,17 @@
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body ng-controller="Agp">
+    <h1>Static devs</h2>
     <div ng-repeat="dev in agpDevsOporto track by $index">
+      <dev dev="dev"></dev>
+      <hr ng-show="!$last">
+    </div>
+
+    <h1>Devs from api</h1>
+    <div>
+      <button ng-click="getDevsFromApi()">Get Devs from api</button>
+    </div>
+    <div ng-repeat="dev in devsFromApi track by $index">
       <dev dev="dev"></dev>
       <hr ng-show="!$last">
     </div>
@@ -13,5 +23,6 @@
     <script type="text/javascript" src="bootstrap.js"></script>
     <script type="text/javascript" src="controllers/agp_controller.js"></script>
     <script type="text/javascript" src="directives/agp_directive.js"></script>
+    <script type="text/javascript" src="services/agp_services.js"></script>
   </body>
 </html>
